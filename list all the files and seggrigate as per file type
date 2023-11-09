@@ -1,0 +1,34 @@
+#!/bin/bash
+
+# Define the directory to search in
+directory_to_search="/path/to/your/directory"
+
+# Use the 'find' command to list all files in the directory
+files=$(find "$directory_to_search" -type f)
+
+# Create an associative array to store file types
+declare -A file_types
+
+# Loop through the files and segregate them by file type
+for file in $files; do
+    # Use the 'file' command to determine the file type
+    file_type=$(file -b --mime-type "$file")
+    
+    # Remove the charset information (if present)
+    file_type="${file_type%%;*}"
+    
+    # Check if the file type exists in the associative array
+    if [[ -n "${file_types[$file_type]}" ]]; then
+        # Append the file to the existing list of that file type
+        file_types[$file_type]+="$file"$'\n'
+    else
+        # Create a new list for the file type
+        file_types[$file_type]="$file"$'\n'
+    fi
+done
+
+# Print the segregated file types and their respective files
+for type in "${!file_types[@]}"; do
+    echo "Files of type '$type':"
+    echo "${file_types[$type]}"
+done
