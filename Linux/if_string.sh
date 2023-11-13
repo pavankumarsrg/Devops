@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-test='my name is harsha'
+test='my name is pavan'
 # Using operators
 out='no'
 
