@@ -8,15 +8,15 @@ echo “STEP 2: Install Java..."
 
 
 echo “STEP 3 Add Jenkins to apt List"
-	Sudo wget 0 /usr/share/Keyrings/jenkins-keyring.asc \
-	 https: //pkg. jenkins. io/debian/ enkins. 10-2023. key
-	echo deb [signed-by=/usr/share/keyrings/ jenkins-keyring.ascl \
-	 https: //pkg. jenkins. lo/debian binary/ | sudo tee \
-	 Jetc/ap/sources. ist. o/ Jenkins. List > /dpu/nall
-	sudo apt. update
+	sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \
+  	 https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+	echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  	 https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  	 /etc/apt/sources.list.d/jenkins.list > /dev/null
+	sudo apt-get update
 
 echo “STEP 4 Install Jenkins”
-	sudo apt install Jenkins
+	sudo apt-get install jenkins
 
 echo “STEP 5 Check Jenkins service status”
 	Sudo systemctl status Jenkins
