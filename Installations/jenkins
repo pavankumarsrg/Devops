@@ -1,20 +1,28 @@
-#!/bin/bash
-echo "Initial update"
-    sudo apt update -y
-    
-echo "STEP1: Install JDK-11"
-    sudo apt install openjdk-11-jdk -y
+#1/binsbash
 
-echo "STEP2: Add the apt key to add jenkins package to apt list"
-    curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+echo “STEP_1 Update apt”
+	sudo apt update
 
-echo "STEP3: Add jenkins package to apt "
-    echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/ | sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null 
-
-echo "STEP4: Update apt again"
-    sudo apt update -y 
+echo “STEP 2: Install Java .
+	sudo apt install fontconfig openjk-17-jre
 
 
+echo “STEP 3 Add Jenkins to apt List"
+	Sudo wget 0 /usr/share/Keyrings/jenkins-keyring.asc \
+	 https: //pkg. jenkins. io/debian/ enkins. 10-2023. key
+	echo deb [signed-by=/usr/share/keyrings/ jenkins-keyring.ascl \
+	 https: //pkg. jenkins. lo/debian binary/ | sudo tee \
+	 Jetc/ap/sources. ist. o/ Jenkins. List > /dpu/nall
+	sudo apt. update
 
-echo "STEP5: Final install the Jenkins"
-    sudo apt-get install jenkins -y
+echo “STEP 4 Install Jenkins”
+	sudo apt install Jenkins
+
+echo “STEP 5 Check Jenkins service status”
+	Sudo systemctl status Jenkins
+
+echo “STEP_6: Open default port of jeknins 8080 & secondary port 50090 in ec2 SG"
+
+
+echo “STEP_7 Get Initial Adain Password”
+	sudo cat /var/Lib/jenkins/secrets/initialAdminpassword
