@@ -3,7 +3,7 @@
 echo “STEP_1 Update apt”
 	sudo apt update
 
-echo “STEP 2: Install Java .
+echo “STEP 2: Install Java..."
 	sudo apt install fontconfig openjk-17-jre
 
 
