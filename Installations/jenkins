@@ -1,10 +1,11 @@
 #1/binsbash
 
 echo “STEP_1 Update apt”
-	sudo apt update
+	sudo apt update-y
 
 echo “STEP 2: Install Java..."
-	sudo apt install fontconfig openjk-17-jre
+	sudo apt install openjdk-17-jdk -y
+
 
 
 echo “STEP 3 Add Jenkins to apt List"
