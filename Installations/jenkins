@@ -22,7 +22,7 @@ echo “STEP 4 Install Jenkins”
 echo “STEP 5 Check Jenkins service status”
 	Sudo systemctl status Jenkins
 
-echo “STEP_6: Open default port of jeknins 8080 & secondary port 50090 in ec2 SG"
+echo “STEP_6: Open default port of jeknins 8080 & secondary port 50000 in ec2 SG"
 
 
 echo “STEP_7 Get Initial Adain Password”
