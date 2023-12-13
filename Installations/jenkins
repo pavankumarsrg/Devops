@@ -1,7 +1,7 @@
 #1/binsbash
 
 echo “STEP_1 Update apt”
-	sudo apt update-y
+	sudo apt update
 
 echo “STEP 2: Install Java..."
 	sudo apt install openjdk-17-jdk -y
