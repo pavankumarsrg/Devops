@@ -131,7 +131,7 @@ fi
 # Running this script with curl command
 
 # To setp up master node run below curl command
-# curl -s https://raw.githubusercontent.com/pavankumarsrg/Devops/edit/main/kubernetes/installation/cluster_setup_using_kubeadm.sh | bash -s master
+# curl s https://raw.githubusercontent.com/pavankumarsrg/Devops/main/kubernetes/installation/cluster_setup_using_kubeadm.sh | bash -s master
 
 # To setp up master node run below curl command
-# curl -s https://raw.githubusercontent.com/pavankumarsrg/Devops/edit/main/kubernetes/installation/cluster_setup_using_kubeadm.sh | bash -s worker
+# curl s https://raw.githubusercontent.com/pavankumarsrg/Devops/main/kubernetes/installation/cluster_setup_using_kubeadm.sh | bash -s worker
