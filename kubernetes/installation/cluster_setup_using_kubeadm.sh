@@ -123,3 +123,15 @@ echo "    3. Run the kubeadm join <TOKEN> command which we get from master"
 echo "    4. Run 'kubectl get nodes' on the control-plane to see this node joined the cluster."
 echo "------------------------------------------------------------------------------------"
 fi
+
+
+
+
+
+# Running this script with curl command
+
+# To setp up master node run below curl command
+# curl -s https://raw.githubusercontent.com/pavankumarsrg/Devops/edit/main/kubernetes/installation/cluster_setup_using_kubeadm.sh | bash -s master
+
+# To setp up master node run below curl command
+# curl -s https://raw.githubusercontent.com/pavankumarsrg/Devops/edit/main/kubernetes/installation/cluster_setup_using_kubeadm.sh | bash -s worker
